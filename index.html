@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Xakurr — услуги и портфолио">
+  <title>adapter @xakurr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="sparks-canvas" class="sparks-canvas" aria-hidden="true"></canvas>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="layout">
+    <aside class="glass-card card-profile fade-up" style="--delay: 0ms">
+      <div class="profile-content">
+        <header class="profile-header">
+          <div class="avatar-wrap">
+            <span class="avatar-orbit" aria-hidden="true"></span>
+            <span class="avatar-shimmer" aria-hidden="true"></span>
+            <span class="status-ring" aria-hidden="true"></span>
+            <img src="avatar.png" alt="Аватар Xakurr" class="avatar" width="120" height="120">
+          </div>
+          <div class="profile-titles">
+            <h1 class="nickname">Xakurr</h1>
+            <p class="status-line">Деанонимизатор</p>
+          </div>
+        </header>
+
+        <div class="stats" role="group" aria-label="Статистика">
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Лет опыта</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100+</span>
+            <span class="stat-label">Валидаций</span>
+          </div>
+          <div class="stat stat--guarantee">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Гарантия</span>
+          </div>
+        </div>
+
+        <section class="section">
+          <h2 class="section-title">Обо мне</h2>
+          <p class="text-muted bio">
+            Приветствую. Я Xakurr — деанонимизатор высшего класса.
+            Найду данные любого человека за определённую плату.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Навыки</h2>
+          <div class="skills">
+              <div class="skill-row" data-value="90">
+                <div class="skill-meta">
+                  <span>Деанон</span>
+                  <span class="skill-pct">0%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-row" data-value="85">
+                <div class="skill-meta">
+                  <span>Сваттинг</span>
+                  <span class="skill-pct">0%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-row" data-value="76">
+                <div class="skill-meta">
+                  <span>Снос аккаунтов</span>
+                  <span class="skill-pct">0%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-row" data-value="86">
+                <div class="skill-meta">
+                  <span>Зачистка данных человека</span>
+                  <span class="skill-pct">0%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+        </section>
+
+        <div class="actions">
+          <a href="https://t.me/xakurr" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Связаться в Telegram
+          </a>
+          <button type="button" class="btn btn-ghost btn-details" aria-haspopup="dialog" aria-controls="details-modal">
+            Подробнее
+          </button>
+        </div>
+
+        <footer class="panel-footer">
+          <p class="footer-credit text-muted">
+            Разработчик сайта —
+            <a href="https://t.me/qvertick" class="credit-link" target="_blank" rel="noopener noreferrer">@qvertick</a>
+          </p>
+        </footer>
+      </div>
+    </aside>
+
+    <div class="column-right">
+      <section class="glass-card fade-up services-section pricing-panel" data-tilt data-tilt-max="8" style="--delay: 140ms">
+        <div class="tilt-inner pricing-panel-inner">
+          <h2 class="section-title">Расценки</h2>
+          <ul class="service-list">
+            <li>
+              <article class="service-row">
+                <div class="service-inner">
+                  <div class="service-body">
+                    <h3 class="service-title">Приватка</h3>
+                    <p class="service-desc">50 тем, несколько десятков терабайт баз данных, множество утилит для поиска информации.</p>
+                  </div>
+                  <div class="service-price">
+                    <span class="price-text">2.5$ <span class="price-sep">/</span> 150 <span class="price-star" aria-hidden="true">★</span></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="service-row">
+                <div class="service-inner">
+                  <div class="service-body">
+                    <h3 class="service-title">Деф</h3>
+                    <ul class="service-tiers">
+                      <li><span class="tier-label">Одноразовый</span><span class="tier-price">75 <span class="price-star" aria-hidden="true">★</span> / 1.5$</span></li>
+                      <li><span class="tier-label">На неделю</span><span class="tier-price">140 <span class="price-star" aria-hidden="true">★</span> / 2.5$</span></li>
+                      <li><span class="tier-label">На месяц</span><span class="tier-price">375 <span class="price-star" aria-hidden="true">★</span> / 6.5$</span></li>
+                      <li><span class="tier-label">Навсегда</span><span class="tier-price">1000 <span class="price-star" aria-hidden="true">★</span> / 20$</span></li>
+                    </ul>
+                  </div>
+                  <div class="service-price">
+                    <span class="price-text price-text--muted">в зависимости <span class="price-star" aria-hidden="true">★</span></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="service-row">
+                <div class="service-inner">
+                  <div class="service-body">
+                    <h3 class="service-title">Обучение</h3>
+                    <ul class="service-tags">
+                      <li>Swatting (сваттинг / лжеминирование)</li>
+                      <li>Anonymity (анонимность)</li>
+                      <li>Deanonymization (деанон)</li>
+                      <li>Account takedown (снос аккаунта)</li>
+                    </ul>
+                  </div>
+                  <div class="service-price">
+                    <span class="price-text">7$ <span class="price-sep">/</span> 400 <span class="price-star" aria-hidden="true">★</span></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="service-row">
+                <div class="service-inner">
+                  <div class="service-body">
+                    <h3 class="service-title">Другие услуги</h3>
+                    <ul class="service-tiers service-tiers--compact">
+                      <li><span class="tier-label">Пробив</span><span class="tier-price">от 75 <span class="price-star" aria-hidden="true">★</span></span></li>
+                      <li><span class="tier-label">Вызов полиции на дом</span><span class="tier-price">7$ / 400 <span class="price-star" aria-hidden="true">★</span></span></li>
+                      <li><span class="tier-label">Эвакуация школы</span><span class="tier-price">12$ / 650 <span class="price-star" aria-hidden="true">★</span></span></li>
+                      <li><span class="tier-label">Сообщение о бытовом конфликте</span><span class="tier-price">8$ / 430 <span class="price-star" aria-hidden="true">★</span></span></li>
+                      <li><span class="tier-label">Заминировать от лица обидчика</span><span class="tier-price">15$ / 750 <span class="price-star" aria-hidden="true">★</span></span></li>
+                      <li><span class="tier-label">Сообщение об убийстве</span><span class="tier-price">20$ / 1000 <span class="price-star" aria-hidden="true">★</span></span></li>
+                      <li><span class="tier-label">Сообщение о террористах</span><span class="tier-price">30$ / 1600 <span class="price-star" aria-hidden="true">★</span></span></li>
+                    </ul>
+                  </div>
+                  <div class="service-price">
+                    <span class="price-text price-text--muted">по запросу <span class="price-star" aria-hidden="true">★</span></span>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="glass-card fade-up protection-section" style="--delay: 220ms">
+        <h2 class="section-title">Защита сайта</h2>
+        <ul class="protection-list">
+            <li class="protection-item">
+              <div class="protection-inner">
+                <svg class="protection-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l8 4v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/></svg>
+                <div>
+                  <h3 class="protection-name">SSL Certificate Secure</h3>
+                  <p class="protection-desc">Шифрование канала между браузером и сервером — данные передаются в защищённом виде и не читаются посторонними.</p>
+                </div>
+              </div>
+            </li>
+            <li class="protection-item">
+              <div class="protection-inner">
+                <svg class="protection-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg>
+                <div>
+                  <h3 class="protection-name">PCI DSS Level 1 Compliant</h3>
+                  <p class="protection-desc">Высший стандарт индустрии платёжных карт: строгий контроль хранения и обработки платёжной информации.</p>
+                </div>
+              </div>
+            </li>
+            <li class="protection-item">
+              <div class="protection-inner">
+                <svg class="protection-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+                <div>
+                  <h3 class="protection-name">ISO 27001 &amp; 27018 Certified</h3>
+                  <p class="protection-desc">Международные стандарты управления информационной безопасностью и защиты персональных данных в облаке.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+      </section>
+    </div>
+  </main>
+
+  <div id="details-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="glass-card modal-panel">
+      <header class="modal-header">
+        <h2 id="modal-title" class="modal-title">Подробнее</h2>
+        <button type="button" class="modal-close" data-close-modal aria-label="Закрыть">&times;</button>
+      </header>
+      <p class="modal-body modal-message">Деанонимизация (сокр. «деанон») — это процесс раскрытия реальной личности пользователя,
+         скрывающегося под сетевым псевдонимом или анонимным профилем в цифровом пространстве. 
+         В эпоху развития информационных технологий анонимность в интернете стала относительным понятием.
+          Каждый пользователь оставляет за собой «цифровой след»,
+           анализ которого позволяет связать виртуальный аккаунт с конкретным физическим лицом.</p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
